@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Api", "01. Api", "{60A816E8-8965-4CF9-80EF-1ED88F2FE834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.Api", "Werter.ProjetoCassandra.Api\Werter.ProjetoCassandra.Api.csproj", "{8208BABA-9707-400F-989D-7452A9C9D6DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Application Services", "02. Application Services", "{3862F1A0-8FE7-4A9B-AC08-CEC9B674C5DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Domain", "03. Domain", "{A40C200C-7096-459B-B59A-3FC4B8A96341}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Infra", "04. Infra", "{CEAF384D-EA51-4F19-90D3-3A12240D69E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Tests", "05. Tests", "{3D48BDD2-7F31-434E-BB48-97F3B06C8042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.Testes", "Werter.ProjetoCassandra.Testes\Werter.ProjetoCassandra.Testes.csproj", "{A884E2E9-B67C-4844-A212-60CF0101ABFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.Domain", "Werter.ProjetoCassandra.Domain\Werter.ProjetoCassandra.Domain.csproj", "{7682E302-F993-43CB-862C-FAFAD9F1056F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8208BABA-9707-400F-989D-7452A9C9D6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8208BABA-9707-400F-989D-7452A9C9D6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8208BABA-9707-400F-989D-7452A9C9D6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8208BABA-9707-400F-989D-7452A9C9D6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A884E2E9-B67C-4844-A212-60CF0101ABFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A884E2E9-B67C-4844-A212-60CF0101ABFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A884E2E9-B67C-4844-A212-60CF0101ABFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A884E2E9-B67C-4844-A212-60CF0101ABFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7682E302-F993-43CB-862C-FAFAD9F1056F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7682E302-F993-43CB-862C-FAFAD9F1056F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7682E302-F993-43CB-862C-FAFAD9F1056F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7682E302-F993-43CB-862C-FAFAD9F1056F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8208BABA-9707-400F-989D-7452A9C9D6DC} = {60A816E8-8965-4CF9-80EF-1ED88F2FE834}
+		{A884E2E9-B67C-4844-A212-60CF0101ABFB} = {3D48BDD2-7F31-434E-BB48-97F3B06C8042}
+		{7682E302-F993-43CB-862C-FAFAD9F1056F} = {A40C200C-7096-459B-B59A-3FC4B8A96341}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F33CEC1E-05F1-467C-ACF1-1AF48E2ECFD4}
+	EndGlobalSection
+EndGlobal
