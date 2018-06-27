@@ -1,4 +1,6 @@
-﻿namespace Werter.ProjetoCassandra.Domain.StoreContext.Entities
+﻿using Werter.ProjetoCassandra.Shared.Entities;
+
+namespace Werter.ProjetoCassandra.Domain.StoreContext.Entities
 {
     public class Produto : EntityBase
     {

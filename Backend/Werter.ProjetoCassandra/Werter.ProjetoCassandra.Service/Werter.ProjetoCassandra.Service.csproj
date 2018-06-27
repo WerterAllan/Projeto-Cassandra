@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Werter.ProjetoCassandra.Domain\Werter.ProjetoCassandra.Domain.csproj" />
     <ProjectReference Include="..\Werter.ProjetoCassandra.Shared\Werter.ProjetoCassandra.Shared.csproj" />
   </ItemGroup>
 

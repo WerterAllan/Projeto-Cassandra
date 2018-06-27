@@ -1,7 +1,7 @@
 ﻿using Flunt.Notifications;
 using System;
 
-namespace Werter.ProjetoCassandra.Domain.StoreContext.Entities
+namespace Werter.ProjetoCassandra.Shared.Entities
 {
     public abstract class EntityBase : Notifiable
     {

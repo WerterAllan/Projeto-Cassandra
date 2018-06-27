@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Werter.ProjetoCassandra.Domain.StoreContext.ValueObject;
+﻿using Werter.ProjetoCassandra.Domain.StoreContext.ValueObject;
+using Werter.ProjetoCassandra.Shared.Entities;
 
 namespace Werter.ProjetoCassandra.Domain.StoreContext.Entities
 {

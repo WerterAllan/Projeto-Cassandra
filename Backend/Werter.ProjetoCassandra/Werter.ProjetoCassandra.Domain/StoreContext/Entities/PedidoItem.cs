@@ -1,5 +1,6 @@
 ﻿using Flunt.Validations;
 using System;
+using Werter.ProjetoCassandra.Shared.Entities;
 
 namespace Werter.ProjetoCassandra.Domain.StoreContext.Entities
 {
@@ -12,7 +13,7 @@ namespace Werter.ProjetoCassandra.Domain.StoreContext.Entities
             Quantidade = quantidade;
 
             AddNotifications(new Contract()
-                .IsLowerOrEqualsThan(quantidade, 0, "PedidoItem", "Quantidade de produto informada é inválida"));
+                .IsLowerThan(0, quantidade, "PedidoItem", "Quantidade de produto informada é inválida"));
         }
 
         public Produto Produto { get; private set; }
