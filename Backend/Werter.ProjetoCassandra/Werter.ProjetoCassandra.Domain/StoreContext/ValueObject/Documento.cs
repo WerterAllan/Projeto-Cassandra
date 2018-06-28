@@ -5,11 +5,11 @@ namespace Werter.ProjetoCassandra.Domain.StoreContext.ValueObject
 {
     public class Documento : Notifiable
     {
-        public string Number { get; private set; }
+        public string Numero { get; private set; }
 
         public Documento(string number)
         {
-            Number = number;
+            Numero = number;
 
             AddNotifications(new Contract()
                .IsTrue(CpfValido(number), "Documento", "CPF inválido"));
@@ -17,7 +17,7 @@ namespace Werter.ProjetoCassandra.Domain.StoreContext.ValueObject
 
         public override string ToString()
         {
-            return Number;
+            return Numero;
         }
 
         public static bool CpfValido(string cpf)

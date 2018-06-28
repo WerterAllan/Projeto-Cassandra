@@ -7,6 +7,6 @@ namespace Werter.ProjetoCassandra.Shared.Handlers
 {
     public interface IHandler<T> where T : ICommand
     {
-        IDtoResult Handler(T command);
+        ICommandResult Handler(T command);
     }
 }

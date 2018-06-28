@@ -25,6 +25,13 @@ namespace Werter.ProjetoCassandra.Domain.StoreContext.FluentBuilder
             return this;
         }
 
+        public PedidoBuilder Nome(Nome nome)
+        {
+            this._primeiroNome = nome.PrimeiroNome;
+            this._ultimoNome = nome.UltimoNome;
+            return this;
+        }
+
         public PedidoBuilder Documento(string numeroDoDocumento)
         {
             _numeroDocumento = numeroDoDocumento;

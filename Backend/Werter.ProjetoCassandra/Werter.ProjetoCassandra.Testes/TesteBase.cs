@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 using Werter.ProjetoCassandra.Domain.StoreContext.Entities;
 using Werter.ProjetoCassandra.Domain.StoreContext.FluentBuilder;
+using Werter.ProjetoCassandra.Testes.Helpers;
 
 namespace Werter.ProjetoCassandra.Testes
 {
@@ -34,6 +35,18 @@ namespace Werter.ProjetoCassandra.Testes
             return MontarPedidoBasico()
                             .AdicionarProduto(UmProduto(), 5)
                             .Build();
+        }
+
+        public Cliente GerarClienteFake()
+        {
+            var cliente = new ClienteBuilder()
+                .Nome(Fake.Person.FirstName, Fake.Person.LastName)
+                .Email(Fake.Person.Email)
+                .Documento(Fake.Person.Cpf())
+                .Build();
+
+            return cliente;
+
         }
 
 
