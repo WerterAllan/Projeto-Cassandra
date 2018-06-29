@@ -12,6 +12,7 @@ namespace Werter.ProjetoCassandra.Domain.Repositories
         bool EmailExiste(string email);
         void Registrar(Cliente cliente);
         new List<Cliente> Buscar(Expression<Func<Cliente, bool>> predicate, params object[] includes);
+        new Cliente BuscarPorId(Guid id);
         new void Atualizar(Cliente entity);
     }
 }

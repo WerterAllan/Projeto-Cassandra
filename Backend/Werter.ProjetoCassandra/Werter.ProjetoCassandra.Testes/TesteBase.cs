@@ -11,14 +11,18 @@ namespace Werter.ProjetoCassandra.Testes
 {
     public abstract class TesteBase
     {
+        private Random _gerador = new Random();
         public Faker Fake { get; }
         public TesteBase()
         {
             Fake = new Faker("pt_BR");
         }
 
+        public int GerarValor(int inicial, int final) => _gerador.Next(inicial, final);
+
         public PedidoBuilder MontarPedidoBasico()
         {
+            
             return new PedidoBuilder()
                 .Nome(Fake.Person.FirstName, Fake.Person.LastName)
                 .Documento(Fake.Person.Cpf())
@@ -39,7 +43,7 @@ namespace Werter.ProjetoCassandra.Testes
 
         public Cliente GerarClienteFake()
         {
-            var cliente = new ClienteBuilder()
+            var cliente = new ClienteBuilder()                
                 .Nome(Fake.Person.FirstName, Fake.Person.LastName)
                 .Email(Fake.Person.Email)
                 .Documento(Fake.Person.Cpf())
@@ -63,6 +67,11 @@ namespace Werter.ProjetoCassandra.Testes
                 Console.WriteLine(texto);
 
             return texto;
+        }
+
+        public static void Log(string info)
+        {
+            Console.WriteLine(info);
         }
     }
 }

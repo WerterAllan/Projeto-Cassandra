@@ -7,22 +7,22 @@ namespace Werter.ProjetoCassandra.Domain.Converts
 {
     public static class PedidoConvert
     {
-        public static Pedido ParaEntidadePedidoSemItens(this CreatePedidoCommand command)
-        {
-            var nome = ExtrairNome(command.NomeCliente);
-            var pedido = new PedidoBuilder()
-                .Nome(nome)
-                .Documento(command.Cpf)
-                .Email(command.Email)
-                .Build();
+        //public static Pedido ParaEntidadePedidoSemItens(this CreatePedidoCommand command)
+        //{
+        //    var nome = ExtrairNome(command.NomeCliente);
+        //    var pedido = new PedidoBuilder()
+        //        .Nome(nome)
+        //        .Documento(command.Cpf)
+        //        .Email(command.Email)
+        //        .Build();
 
-            return pedido;
-        }
+        //    return pedido;
+        //}
 
-        private static Nome ExtrairNome(string nome)
-        {
-            var nomesSeparados = nome.Split(new char[] { ' ' }, 2);
-            return new Nome(nomesSeparados[0], nomesSeparados[1]);
-        }
+        //private static Nome ExtrairNome(string nome)
+        //{
+        //    var nomesSeparados = nome.Split(new char[] { ' ' }, 2);
+        //    return new Nome(nomesSeparados[0], nomesSeparados[1]);
+        //}
     }
 }

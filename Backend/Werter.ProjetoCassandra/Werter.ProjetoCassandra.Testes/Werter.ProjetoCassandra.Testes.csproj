@@ -19,8 +19,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Werter.ProjetoCassandra.Api\Werter.ProjetoCassandra.Api.csproj" />
     <ProjectReference Include="..\Werter.ProjetoCassandra.Domain\Werter.ProjetoCassandra.Domain.csproj" />
+    <ProjectReference Include="..\Werter.ProjetoCassandra.Infra\Werter.ProjetoCassandra.Infra.csproj" />
     <ProjectReference Include="..\Werter.ProjetoCassandra.Service\Werter.ProjetoCassandra.Service.csproj" />
     <ProjectReference Include="..\Werter.ProjetoCassandra.Shared\Werter.ProjetoCassandra.Shared.csproj" />
+    <ProjectReference Include="..\Werter.ProjetoCassandra.SqlLocalDatabase\Werter.ProjetoCassandra.SqlLocalDatabase.csproj" />
   </ItemGroup>
 
 </Project>

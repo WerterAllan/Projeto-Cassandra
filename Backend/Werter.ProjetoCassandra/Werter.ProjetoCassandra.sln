@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Api", "01. Api", "{60A816E8-8965-4CF9-80EF-1ED88F2FE834}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.Api", "Werter.ProjetoCassandra.Api\Werter.ProjetoCassandra.Api.csproj", "{8208BABA-9707-400F-989D-7452A9C9D6DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Werter.ProjetoCassandra.Api", "Werter.ProjetoCassandra.Api\Werter.ProjetoCassandra.Api.csproj", "{8208BABA-9707-400F-989D-7452A9C9D6DC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Application Services", "02. Application Services", "{3862F1A0-8FE7-4A9B-AC08-CEC9B674C5DF}"
 EndProject
@@ -15,13 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Infra", "04. Infra", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Tests", "05. Tests", "{3D48BDD2-7F31-434E-BB48-97F3B06C8042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.Testes", "Werter.ProjetoCassandra.Testes\Werter.ProjetoCassandra.Testes.csproj", "{A884E2E9-B67C-4844-A212-60CF0101ABFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Werter.ProjetoCassandra.Testes", "Werter.ProjetoCassandra.Testes\Werter.ProjetoCassandra.Testes.csproj", "{A884E2E9-B67C-4844-A212-60CF0101ABFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.Domain", "Werter.ProjetoCassandra.Domain\Werter.ProjetoCassandra.Domain.csproj", "{7682E302-F993-43CB-862C-FAFAD9F1056F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Werter.ProjetoCassandra.Domain", "Werter.ProjetoCassandra.Domain\Werter.ProjetoCassandra.Domain.csproj", "{7682E302-F993-43CB-862C-FAFAD9F1056F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.Shared", "Werter.ProjetoCassandra.Shared\Werter.ProjetoCassandra.Shared.csproj", "{CC3C809A-A4EA-484A-B570-C724FB02822F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Werter.ProjetoCassandra.Shared", "Werter.ProjetoCassandra.Shared\Werter.ProjetoCassandra.Shared.csproj", "{CC3C809A-A4EA-484A-B570-C724FB02822F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.Service", "Werter.ProjetoCassandra.Service\Werter.ProjetoCassandra.Service.csproj", "{3FB75CBC-9BE1-454B-9F4A-BBB6E79640F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Werter.ProjetoCassandra.Service", "Werter.ProjetoCassandra.Service\Werter.ProjetoCassandra.Service.csproj", "{3FB75CBC-9BE1-454B-9F4A-BBB6E79640F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlServer", "SqlServer", "{C97DD95B-C727-488E-814B-E01AE274D3E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.Infra", "Werter.ProjetoCassandra.Infra\Werter.ProjetoCassandra.Infra.csproj", "{C76FB73C-D911-41AC-A028-840CC2784385}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Werter.ProjetoCassandra.SqlLocalDatabase", "Werter.ProjetoCassandra.SqlLocalDatabase\Werter.ProjetoCassandra.SqlLocalDatabase.csproj", "{4A078B46-498D-44FE-92B9-2F586B792E1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +55,14 @@ Global
 		{3FB75CBC-9BE1-454B-9F4A-BBB6E79640F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FB75CBC-9BE1-454B-9F4A-BBB6E79640F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FB75CBC-9BE1-454B-9F4A-BBB6E79640F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C76FB73C-D911-41AC-A028-840CC2784385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76FB73C-D911-41AC-A028-840CC2784385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76FB73C-D911-41AC-A028-840CC2784385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76FB73C-D911-41AC-A028-840CC2784385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A078B46-498D-44FE-92B9-2F586B792E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A078B46-498D-44FE-92B9-2F586B792E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A078B46-498D-44FE-92B9-2F586B792E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A078B46-498D-44FE-92B9-2F586B792E1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +73,8 @@ Global
 		{7682E302-F993-43CB-862C-FAFAD9F1056F} = {A40C200C-7096-459B-B59A-3FC4B8A96341}
 		{CC3C809A-A4EA-484A-B570-C724FB02822F} = {A40C200C-7096-459B-B59A-3FC4B8A96341}
 		{3FB75CBC-9BE1-454B-9F4A-BBB6E79640F2} = {3862F1A0-8FE7-4A9B-AC08-CEC9B674C5DF}
+		{C76FB73C-D911-41AC-A028-840CC2784385} = {CEAF384D-EA51-4F19-90D3-3A12240D69E3}
+		{4A078B46-498D-44FE-92B9-2F586B792E1E} = {C97DD95B-C727-488E-814B-E01AE274D3E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F33CEC1E-05F1-467C-ACF1-1AF48E2ECFD4}

@@ -15,8 +15,7 @@ namespace Werter.ProjetoCassandra.Testes.Commands
         {
             var command = new CreatePedidoItemCommand
             {
-                PedidoId = Guid.NewGuid(),
-                ProdutoId = Guid.NewGuid(),
+                Produto = Guid.NewGuid(),                
                 Quantidade = 1
             };
 

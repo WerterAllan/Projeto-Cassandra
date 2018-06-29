@@ -8,21 +8,22 @@ namespace Werter.ProjetoCassandra.Domain.StoreContext.Entities
 {
     public class Pedido : EntityBase
     {
+        public Pedido() { }
         public Pedido(Cliente cliente)
         {
-            Cliente = cliente;
+            this.Cliente = cliente;
             DataDoPedido = DateTime.Now;
             _itens = new List<PedidoItem>();
         }
 
         private List<PedidoItem> _itens;
+        
+        public Cliente Cliente { get; private set; }
 
         /// <summary>
         /// Numero do pedido que sera apresentado para o usuario
         /// </summary>
-        public string NumeroPedido { get; set; }
-
-        public Cliente Cliente { get; private set; }
+        public string NumeroPedido { get; set; }        
         public decimal ValorTotal { get; private set; }
         public DateTime DataDoPedido { get; private set; }
 
@@ -30,7 +31,9 @@ namespace Werter.ProjetoCassandra.Domain.StoreContext.Entities
 
         public void AdicionarItem(Produto produto, int quantidade)
         {
-            this._itens.Add(new PedidoItem(produto, quantidade));
+            var pedidoItem = new PedidoItem(produto, quantidade);
+            this._itens.Add(pedidoItem);
+            AddNotifications(pedidoItem.Notifications);
         }
 
         public void GerarPedido()

@@ -12,14 +12,15 @@ namespace Werter.ProjetoCassandra.Testes.Commands
         [TestMethod]
         public void PedidoValido()
         {
-            var command = new CreatePedidoCommand
+            var command = new CreatePedidoCommand { Cliente = Guid.NewGuid() };
+            var item = new CreatePedidoItemCommand
             {
-                Cpf = Fake.Person.Cpf(),
-                DataPedido = DateTime.Now,
-                Email = Fake.Person.Email,
-                NomeCliente = $"{ Fake.Person.FirstName } { Fake.Person.LastName }",
-                ValorTotal = Fake.Random.Decimal(100, 10000)
+                Produto = Guid.NewGuid(),
+                Quantidade = 2
             };
+
+            command.ItensDoPedido.Add(item);
+            
 
             command.EValido()
                 .Should().BeTrue(ExtrairAsNotificacoes(command));
