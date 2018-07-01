@@ -20,7 +20,7 @@ namespace Werter.ProjetoCassandra.Testes.Handlers
     public class PedidoHandlerTestes : TesteBase
     {
         private IPedidoRepository _pedidoRepository;
-        private IProdutoRespository _produtoRepository;
+        private IProdutoRepository _produtoRepository;
         private IClienteRepository _clienteRepository;
         private Cliente _clienteFake;
         private Produto _produto;
@@ -32,7 +32,7 @@ namespace Werter.ProjetoCassandra.Testes.Handlers
         public void SetUp()
         {
             _pedidoRepository = Substitute.For<IPedidoRepository>();
-            _produtoRepository = Substitute.For<IProdutoRespository>();
+            _produtoRepository = Substitute.For<IProdutoRepository>();
             _clienteRepository = Substitute.For<IClienteRepository>();
             _clienteFake = GerarClienteFake();
             _produto = UmProduto();

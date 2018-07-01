@@ -13,12 +13,12 @@ namespace Werter.ProjetoCassandra.Service.Handlers
     {
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IClienteRepository _clienteRepository;
-        private readonly IProdutoRespository _produtoRepository;        
+        private readonly IProdutoRepository _produtoRepository;        
 
         public PedidoHandler(
             IPedidoRepository pedidoRepository,             
             IClienteRepository clienteRepository,
-            IProdutoRespository produtoRespository
+            IProdutoRepository produtoRespository
             )
         {
             _pedidoRepository = pedidoRepository;            

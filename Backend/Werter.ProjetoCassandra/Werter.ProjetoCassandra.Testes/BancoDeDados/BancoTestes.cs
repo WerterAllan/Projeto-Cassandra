@@ -1,9 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.EntityFrameworkCore.Infrastructure;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 using Werter.ProjetoCassandra.Infra.Context;
 using Werter.ProjetoCassandra.SqlLocalDatabase;
 
@@ -12,24 +10,36 @@ namespace Werter.ProjetoCassandra.Testes.BancoDeDados
     [TestClass]
     public sealed class BancoTestes : TesteBase
     {
-        [TestMethod]
-        public void DeveFazerUmaSimplesConexao()
-        {
 
-            var stringDeConexao = DatabaseHelper.GetLocalDbStringConnection();
-            using (var conexao = new SqlConnection(stringDeConexao))
+        private string _stringDeConexao;
+
+        [TestInitialize]
+        public void SetUp()
+        {            
+            var dbHelper = new DatabaseHelper("WerterStoreDb");
+            dbHelper.CriarInstanciaDoBancoLocal();
+            _stringDeConexao = dbHelper.ObterAStringDeConexaoLocalDb();
+
+        }
+
+        //[TestMethod]
+        public void DeveFazerUmaSimplesConexao()
+        {            
+            using (var conexao = new SqlConnection(_stringDeConexao))
             {
                 conexao.Open();
             }
 
         }
 
-        [TestMethod]
+        [TestMethod]        
         public void DeveInicializarOBancoDeDadosComSucesso()
         {
-            using (var context = new StoreContext())
+            using (var context = new StoreContext(_stringDeConexao))
             {
-                
+                //context.Database.EnsureDeleted();                                
+                //context.Database.Migrate();
+
                 var produto = UmProduto();
 
                 context.Produtos.Add(produto);

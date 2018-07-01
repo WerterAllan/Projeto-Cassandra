@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Werter.ProjetoCassandra.Api.DependencyInjection;
+using Werter.ProjetoCassandra.Domain.Contracts;
+using Werter.ProjetoCassandra.Domain.Repositories;
+using Werter.ProjetoCassandra.Infra.Context;
+using Werter.ProjetoCassandra.Infra.Repository;
+using Werter.ProjetoCassandra.Service.Handlers;
+using Werter.ProjetoCassandra.Service.Queries;
 
 namespace Werter.ProjetoCassandra.Api
 {
@@ -24,7 +25,23 @@ namespace Werter.ProjetoCassandra.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            // queries
+            services.AddTransient<ProdutoQuery, ProdutoQuery>();
+
+            // handlers
+            services.AddTransient<ProdutoHandler, ProdutoHandler>();
+
+            
+            // Contexto EF Core
+            //DependencyInjectionEFContext.AddDependency(services);
+
+            // Contexto cassandra
+            DependencyInjectionCassandraContext.AddDependency(services);
+
         }
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

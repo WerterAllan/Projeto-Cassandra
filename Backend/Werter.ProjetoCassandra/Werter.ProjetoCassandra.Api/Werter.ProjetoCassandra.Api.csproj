@@ -9,11 +9,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CassandraCSharpDriver" Version="3.6.0" />
+    <PackageReference Include="Flunt" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Werter.ProjetoCassandra.Domain\Werter.ProjetoCassandra.Domain.csproj" />
+    <ProjectReference Include="..\Werter.ProjetoCassandra.Infra.Cassandra\Werter.ProjetoCassandra.Infra.Cassandra.csproj" />
+    <ProjectReference Include="..\Werter.ProjetoCassandra.Infra\Werter.ProjetoCassandra.Infra.csproj" />
+    <ProjectReference Include="..\Werter.ProjetoCassandra.Service\Werter.ProjetoCassandra.Service.csproj" />
   </ItemGroup>
 
 </Project>

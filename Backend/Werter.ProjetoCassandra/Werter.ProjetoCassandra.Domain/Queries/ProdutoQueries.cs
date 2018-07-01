@@ -12,5 +12,11 @@ namespace Werter.ProjetoCassandra.Domain.Queries
         {
             return x => ids.Contains(x.Id);
         }
+
+        public static Expression<Func<Produto, bool>> Buscar(Guid id)
+        {
+            return x => x.Id == id;
+        }
+
     }
 }
